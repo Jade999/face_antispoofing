@@ -6,15 +6,14 @@
 #include <math.h>
 #include "linear.h"
 #include "tron.h"
-#include "utils.h"
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <string>
 #include <opencv2/core/core.hpp>  
 #include <opencv2/highgui/highgui.hpp>  
 #include "opencv2/imgproc/imgproc.hpp"  
 #include "opencv2/objdetect/objdetect.hpp"
-#include "opencv2/nonfree/nonfree.hpp"
 #include <vl/host.h>
 #include <vl/fisher.h>
 #include <vl/gmm.h>

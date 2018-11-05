@@ -1,9 +1,9 @@
 #ifndef _FACE_DETECTOR_H
 #define _FACE_DETECTOR_H
 
-#include<string>
-#include<iostream>
-#include<stdio.h>
+#include <string>
+#include <iostream>
+#include <stdio.h>
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
@@ -26,7 +26,7 @@ public:
 		};
 	}
 
-	std::vector<cv::Rect>& faceDetector::detect(cv::Mat &img)
+	std::vector<cv::Rect>& detect(cv::Mat &img)
 	{
 		cv::Mat img_gray;
 		cvtColor(img,img_gray,CV_BGR2GRAY);

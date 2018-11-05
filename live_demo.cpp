@@ -10,7 +10,7 @@
 #include "antiSpofModel.h"
 #include "featureExtractor.h"
 #include "faceDetector.h"
-#include "ml.hpp"
+#include <opencv2/ml.hpp>
 #include "linear.h"
 
 using namespace std;
@@ -314,9 +314,9 @@ int predictLabel(struct model *& svm, cv::Mat& code)
 
 int main()
 {
-	string svm_model = ".\\surf11_pca300_balance\\svm_7.dat";
-	string pca_model = ".\\surf11_pca300_balance\\pca.dat";
-	string gmm_model = ".\\surf11_pca300_balance\\gmm.dat";
+	string svm_model = "./surf11_pca300_balance/svm_7.dat";
+	string pca_model = "./surf11_pca300_balance/pca.dat";
+	string gmm_model = "./surf11_pca300_balance/gmm.dat";
 
 	svmModel* svm = Malloc(svmModel, 1);
 	cv::PCA pca;
@@ -399,7 +399,7 @@ int main()
 	{
 		vl_gmm_delete(gmm);
 		free_and_destroy_model(&svm);
-		cout << "--£¨!£© No capture id : 0 " << endl;
+		cout << "--ï¿½ï¿½!ï¿½ï¿½ No capture id : 0 " << endl;
 		system("pause");
 		exit(1);
 	}

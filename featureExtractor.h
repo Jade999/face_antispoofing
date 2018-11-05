@@ -7,9 +7,9 @@
 #include "opencv2/features2d/features2d.hpp"
 #include "opencv2/opencv_modules.hpp"
 #include "opencv2/objdetect/objdetect.hpp"
-#include"opencv2/xfeatures2d.hpp"  
+#include "opencv2/xfeatures2d.hpp"  
 #include "opencv2/imgcodecs.hpp"
-#include<opencv2/opencv.hpp>  
+#include <opencv2/opencv.hpp>  
 #include <vector>
 
 using namespace std;
@@ -51,7 +51,7 @@ public:
 		}
 		numDensePoint = densePoints.size();
 	}
-	cv::Mat featureExtractor::findSurfDescriptor(cv::Mat& img)
+	cv::Mat findSurfDescriptor(cv::Mat& img)
 	{
 		cv::Mat hsv, ycrcb;
 		cvtColor(img, hsv, CV_BGR2HSV);
@@ -103,11 +103,11 @@ public:
 	//    return key_points;
 	//}
 
-	int featureExtractor::get_featureDim()
+	int get_featureDim()
 	{
 		return featureDim;
 	}
-	int featureExtractor::get_numDensePoint()
+	int get_numDensePoint()
 	{
 		return numDensePoint;
 	}
